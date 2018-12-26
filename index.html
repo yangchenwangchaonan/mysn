@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>看来明年的我还能继续浪！</title>
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta name="format-detection" content="email=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- <script type="text/javascript" src="js/full.js"></script>
+<script type="text/javascript" src="js/app_url.js"></script> -->
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+<script type="text/javascript" src='https://res.wx.qq.com/open/js/jweixin-1.1.0.js'></script>
+<script type="text/javascript" src="js/wxShare.js?v=2"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=8VZX1wKY7urCMsyEtakkZjSCBgYGABLO"></script> 
+<!--Miaozhen基础代码-->
+<script>
+(function(a, e, f, g, b, c, d) {
+ a.ClickiTrackerName = b;
+ a[b] = a[b] || function() {(a[b].queue = a[b].queue || []).push(arguments)};
+ a[b].start = +new Date; c = e.createElement(f); d = e.getElementsByTagName(f)[0];
+ c.async = 1; c.src = g; d.parentNode.insertBefore(c, d)
+})(window, document, 'script', '//stm-cdn.cn.miaozhen.com/clicki.min.js?v='+Math.round(new Date().getTime()/1000/300), 'stm_clicki');
+stm_clicki('create', 'dc-2005', 'auto');
+stm_clicki('send', 'pageview');
+</script>
+
+<!--Google Analytics-->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-81623598-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<!--Miaozhen热点图代码-->
+<script>
+stm_clicki('require','heatmap', '//stm-cdn.cn.miaozhen.com/plugins/heatmap.js?v='+Math.round(new Date().getTime()/1000/1800));
+stm_clicki('heatmap:on',5);
+</script>
+
+<!--baidu-->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8c1b3404547c51a56536ea214d2dec6d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script>
+//app_url.load({type:"css", path:"css/",data:["default","animate","style"]});
+</script>
+<!-- online -->
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+    <body>
+        <div class='main'>
+            <div id="allmap"></div>
+            <div class="blue"></div>
+
+            <!-- load -->
+            <div id="load" class="main">
+                <img src="images/load_bg.jpg?v=2" class="bg" />
+                <div class="normalPage">
+                    <img src="images/load_card1.png?v=2" class="load_card1 load_card1_a" />
+                    <img src="images/load_card2.png?v=2" class="load_card2 load_card2_a" />
+                    <div class="load_text touch load_text_a">
+                        <img src="images/load_text.png?v=2" class="bg" style="width:1.84rem;" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- index -->
+            <div id="index" class="main hide">
+                <img src="images/index_bg.jpg?v=2" class="bg" />
+                <img src="images/index_arrow1.png?v=2" class="index_arrow1 arrow_al" />
+                <img src="images/index_arrow2.png?v=2" class="index_arrow2 arrow_as" />
+                <img src="images/index_main.png?v=2" class="index_main move_from_rightDown_short hide">
+                <img src="images/index_tiao1.png?v=2" class="index_tiao1 move_from_leftUp_short hide" />
+                <img src="images/index_tiao2.png?v=2" class="index_tiao2 move_from_leftUp_short hide" />
+                <img src="images/index_yuan.png?v=2" class="index_yuan scale_a hide" />
+                <img src="images/index_btn1.png?v=2" class="index_btn1 move_from_down_TOTO hide" />
+                <img src="images/index_btn2.png?v=2" class="index_btn2 move_from_down_TOTO hide" />
+                <img src="images/index_icons.png?v=2" class="index_icons" />
+                <div class="index_btn1 touch hide"></div>
+                <div class="index_btn2 touch hide"></div>
+            </div>
+
+            <!-- 问题 -->
+            <div id="questions" class="main hide">
+                <img src="images/q_bg.jpg?v=2" class="bg" />
+                <!--
+                <div id="q1" class="main">
+                    <img src="images/q1_a.png?v=2" class="qn_a" id="q1_a" />
+                    <img src="images/q1_b.png?v=2" class="qn_b" id="q1_b" />
+                    <img src="images/q1_head.png?v=2" class="qn_head" center />
+                    <div class="qn_btn_a touch"></div>
+                    <div class="qn_btn_b touch"></div>                  
+                </div>
+            -->
+            </div>
+
+            <!-- 箭头提示 -->
+            <div id="arrow_ts" class="main hide">
+                <img src="images/q_arrow_l.png?v=2" class="q_arrow_l arrow_al" />
+                <img src="images/q_arrow_r.png?v=2" class="q_arrow_r arrow_ar" />
+                <img src="images/q_arrow_text.png?v=2" class="q_arrow_text" center />
+            </div>
+
+            <!-- 倒计时 -->
+            <div id="djs" class="hide">
+                <img src="images/q_1.png?v=2" class="q_1 hide" center />
+                <img src="images/q_2.png?v=2" class="q_2 hide" center />
+                <img src="images/q_3.png?v=2" class="q_3" center />
+            </div>
+
+            <!-- 保存提示 -->
+            <div id="savets" class="main hide">
+                <img src="images/save_text.png?v=3" class="save_text move_from_up_short" center />
+                <img src="images/save_shiyi.png?v=3" class="save_qingsu move_from_down_short" id="save_shiyi" center />
+                <img src="images/save_qingsu.png?v=3" class="save_qingsu move_from_down_short" id="save_qingdu" center />
+                <img src="images/save_zhongdu.png?v=3" class="save_qingsu move_from_down_short" id="save_zhongdu" center />
+                <img src="images/save_zhongduzhongdu.png?v=3" class="save_qingsu move_from_down_short" id="save_zhongduzhongdu" center />
+                <img src="images/save_yanzhong.png?v=3" class="save_qingsu move_from_down_short" id="save_yanzhong" center />
+                <div class="savets_wendu touch move_from_down_short">22℃ 晴</div>
+                <div class="savets_zs touch move_from_down_short">188</div>
+            </div>
+
+            <!-- 结果 -->
+            <div id="hb" class="main hide">
+                <canvas id="canvas" class="op0"></canvas>
+                <!-- <div class="blue"></div> -->
+                <img src="images/r_bg.jpg?v=2" class="main" id="r_bg" noauto="noauto" />
+                <!-- 
+                <img src="images/r1_1.png?v=2" class="rn_1 move_from_up_short" id="rn_1" center />
+                <img src="images/r1_2.png?v=2" class="rn_2 move_from_down_short" id="rn_2" />
+                <img src="images/r1s_1.png?v=2" class="r1s_1 move_from_up_short" center />
+                <img src="images/r1s_pic.png?v=2" class="r1s_pic move_from_up_short" center />
+                <img src="images/r1s_2.png?v=2" class="r1s_2 move_from_down_short" center />
+                <img src="images/rs_bottom.png?v=2" class="rs_bottom move_from_down_short" /> 
+                -->
+            </div>
+
+            <div class="main hide" id="savetts">
+                <div class="black hide"></div>
+                <img src="images/save_ts.png" center hCenter />
+            </div>
+            
+            <img src="images/music.png?v=2" class="music music_a" />
+            <div class="music touch"></div>
+
+            <!-- Cross screen -->
+            <div id="hp">
+                <div class="hp_bg"></div>
+                <img src="images/weile.png?v=2" class="hp_text" noauto="noauto" />
+                <img src="images/phone.png?v=2" class="hp_phone hpAnimate" noauto="noauto" />
+            </div>
+
+            <!-- wait -->
+            <div id="wait" class="main hide">
+                <div class="black"></div>
+                <img src="images/wait.gif" class="wait" noauto="noauto" />
+            </div>            
+        </div>
+
+        <!-- AUDIO -->
+        <audio id="music" loop="loop" autoplay="autoplay">
+            <source src="music/music.mp3?v=2" type="audio/mpeg" />
+        </audio>
+    </body>
+</html>
+<!-- online -->
+<script type="text/javascript" src="js/rem_tools.min.js?v=3"></script>
+<script type="text/javascript" src="js/cityTianqi.js?v=3"></script>
+<script type="text/javascript" src="js/index.js?v=8"></script>
+<script type="text/javascript" src="js/event.js?v=3"></script>
+<script type="text/javascript">
+//app_url.load({type:"js",path:"js/",data:["rem_tools.min","cityTianqi","index","event"]});
+document.addEventListener("WeixinJSBridgeReady",function()
+{
+    document.getElementById("music").play(); 
+},false);
+
+$(function(){
+    var options = {
+            title : '看来明年的我还能继续浪！',
+            desc : '2019年生存战力大测试',
+            link : 'http://h5.healen.cn/2018/manyanshuningP2/index.html',
+            imgUrl : 'http://h5.healen.cn/2018/manyanshuningP2/images/index_yuan.png',   
+            statistics:false
+    };        
+    wxShare.init(options);
+})
+
+main.init();
+main.getTQData(function()
+{
+    setTimeout(function()
+    {
+        remTools.autoBind();
+        remTools.autoTop();
+        remTools.auto();
+        main.load();
+        //main.page1();
+        //main.hb();
+        //var code = main.getCityCode('北京');
+        //main.getTQ(code);    
+    },500)
+})
+setSize.debug = false;
+</script>

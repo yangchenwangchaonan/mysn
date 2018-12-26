@@ -1,0 +1,118 @@
+/* ------------------- default ------------------- */
+html,body{
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+
+img{
+	position: absolute;
+}
+
+.hide{display: none;}
+.show{display: block;}
+.op0{opacity: 0;}
+/* .op1{opacity: 1;} */
+.bg{width: 100%;left: 0rem;top: 0rem;}
+.bgb{width: 100%;left: 0rem;bottom: 0rem;}
+.main{position: absolute;width: 100%;height: 100%;left: 0%;top: 0%;overflow: hidden;}
+.mainb{position: absolute;width: 100%;height: 100%;left: 0%;bottom: 0%;overflow: hidden;}
+.black{position: absolute;width: 100%;height: 100%;left: 0%;top: 0%;background: #000;opacity: 0.5;}
+.blue{position: absolute;width: 100%;height: 100%;left: 0%;top: 0%;background: #c9e3e7;}
+.music{right: 0.1rem;top: 0.1rem;width: 0.58rem;}
+
+/* Cross screen */
+#hp{display: none;z-index: 999;}
+.hp_bg{position: absolute;width: 100%;height: 100%;left: 0%;top:0%;background: #000;z-index: 999;}
+.hp_text{position: absolute;width: 60%;left: 20%;top:75%;z-index: 999;}
+.hp_phone{position: absolute;width: 16%;left: 42%;top:29%;z-index: 999;}
+
+#sp{display: none;z-index: 999;}
+.sp_ts{position: absolute;z-index: 999;}
+
+/* -------------------- pages --------------------- */
+.wait{width: 10%;left: 45%;top: 45%;}
+.normalPage{width: 7.5rem;height: 12rem;margin-top: -6rem;left: 0rem;top: 50%;position: absolute;}
+.touch{width: 1rem;height: 1rem;position: absolute;border: 0px solid red;}
+
+/* load */
+.load_card1{top: 4.52rem;left: 3.15rem;width: 1.06rem;}
+.load_card2{top: 4.32rem;left: 3.25rem;width: 1.6rem;}
+.load_text{top: 6.36rem;width: 1.84rem;height: 2rem;left: 2.83rem;overflow: hidden;}
+
+/* index */
+.index_arrow1{top: 0.34rem;right: 0.41rem;}
+.index_arrow2{bottom: 0.5rem;left: 0.6rem;}
+.index_tiao1{left: 0rem;top: 0rem;}
+.index_tiao2{left: 0rem;top: 1.23rem;}
+.index_main{top: 2.63rem;right: 0rem;}
+.index_yuan{top: 6.87rem;left: 2.21rem;}
+.index_btn1{bottom: 0.9rem;left: 0.66rem;width: 2.63rem;height: 1.25rem;}
+.index_btn2{bottom: 0.9rem;right: 0.66rem;width: 2.63rem;height: 1.25rem;}
+.index_icons{bottom: 0.33rem;left: 0.66rem;}
+
+/* q */
+.qn_head{top: 1rem;}
+.qn_a{top: 2.22rem;left: 0.44rem;}
+.qn_b{top: 2.22rem;left: 3.8rem;}
+.qn_btn_a{width: 3.41rem;height: 9.4rem;left: 0.44rem;top: 2.2rem;}
+.qn_btn_b{width: 3.41rem;height: 9.4rem;left: 3.8rem;top: 2.2rem;}
+.q_arrow_l{left: 0.15rem;top: 50%;margin-top: -0.65rem;}
+.q_arrow_r{right: 0.15rem;top: 50%;margin-top: -0.65rem;}
+.q_arrow_text{top: 50%;margin-top: -0.25rem;}
+.q_1{bottom: 0.2rem;}
+.q_2{bottom: 0.2rem;}
+.q_3{bottom: 0.2rem;}
+
+/* save s */
+.save_text{top: 0.8rem;}
+.save_qingsu{top: 2.65rem;display: none;}
+.savets_wendu{left: 3.35rem;top: 5.55rem;font-size: 0.45rem;width: 3rem;color: #224b4f;font-weight: bold;}
+.savets_zs{left: 4.46rem;top: 6.75rem;font-size: 0.45rem;width: 3rem;color: #224b4f;font-weight: bold;}
+
+/* hb */
+.hb_link{left: 0rem;width: 3rem;height: 4.5rem;bottom: 0rem;}
+.r1s_1{top: 0.15rem;left: 0.38rem;}
+.r1s_2{bottom: 1.11rem;}
+.r1s_pic{top: 1.46rem;}
+.rs_bottom{bottom: 0rem;right: 0rem;}
+.rs_bottom2{bottom: 0rem;right: 0rem;}
+.rs_bottom1{bottom: 0.1rem;left: 0.22rem;width: 1.65rem;}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+.index_btn1{bottom: 1.5rem;}
+.index_btn2{bottom: 1.5rem;}
+.save_text{top: 1.8rem;}
+.save_qingsu{top: 4.15rem;}
+.savets_wendu{top: 7.05rem;}
+.savets_zs{top: 8.25rem;}
+
+.r1s_1{top: 0.55rem;}
+.r1s_2{bottom: 2.5rem;}
+.r1s_pic{top: 2.3rem;}
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio:3) {
+.index_btn1{bottom: 1.5rem;}
+.index_btn2{bottom: 1.5rem;}
+.save_text{top: 1.8rem;}
+.save_qingsu{top: 4.15rem;}
+.savets_wendu{top: 7.05rem;}
+.savets_zs{top: 8.25rem;}
+
+.r1s_1{top: 0.55rem;}
+.r1s_2{bottom: 2.5rem;}
+.r1s_pic{top: 2.3rem;}
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio:2) {	
+.index_btn1{bottom: 1.5rem;}
+.index_btn2{bottom: 1.5rem;}
+.save_text{top: 1.8rem;}
+.save_qingsu{top: 4.15rem;}
+.savets_wendu{top: 7.05rem;}
+.savets_zs{top: 8.25rem;}
+
+.r1s_1{top: 0.55rem;}
+.r1s_2{bottom: 2.5rem;}
+.r1s_pic{top: 2.3rem;}
+}
