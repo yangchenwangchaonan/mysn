@@ -130,3 +130,23 @@
 99%{-webkit-transform:translate3d(7.5rem,3.5rem,0) rotate(-150deg);opacity: 1;}
 100%{-webkit-transform:translate3d(7.5rem,3.5rem,0) rotate(-150deg);opacity: 0;}
 }
+
+.save_text_a
+{
+	animation: save_text_a 0.8s ease-in-out infinite;
+	-webkit-animation: save_text_a 0.8s ease-in-out infinite;	
+}
+
+@keyframes save_text_a
+{
+0%{width: 3.05rem;}
+99%{width: 4.5rem;}
+100%{width: 3.05rem;}
+}
+
+@-webkit-keyframes save_text_a
+{
+0%{width: 3.05rem;}
+99%{width: 4.5rem;}
+100%{width: 3.05rem;}
+}

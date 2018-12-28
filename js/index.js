@@ -55,6 +55,8 @@ var main = new function()
 main.init = function()
 {
 	this.ios = this.browser();
+	this.qn = 1;
+	this.allow = true;
 
 	// ------------------- 初始化8道题 -------------------
 
@@ -107,6 +109,7 @@ main.init = function()
 
 	// ------------------- 初始化questions ------------------- 
 	var str = "";
+	$("#questions").html('<img src="images/q_bg.jpg?v=2" class="bg" />');
 	for(var i=1;i<=this.total;i++)
 	{
 		str = '<div id="q'+i+'" class="main hide">'+
@@ -119,12 +122,12 @@ main.init = function()
         $("#questions").append(str);
 	}
 
-	$(".qn_btn_a").bind("touchend",function()
+	$(".qn_btn_a").unbind("touchend").bind("touchend",function()
 	{
 		main.answer("a");
 	})
 
-	$(".qn_btn_b").bind("touchend",function()
+	$(".qn_btn_b").unbind("touchend").bind("touchend",function()
 	{
 		main.answer("b");
 	})
@@ -137,13 +140,35 @@ main.init = function()
         '<img src="images/rs_bottom1.png" id="rs_bottom1" class="rs_bottom1 move_from_down_short" noauto="noauto" />'+ 
         '<img src="images/rs_bottom2.png" id="rs_bottom2" class="rs_bottom2 op0" />'+    	
     	'<img src="images/music.png" class="op0" id="result_hb" noauto="noauto" style="width:7.5rem;height:13.35rem;left:0;top:0;" />'+
+    	'<img src="images/hb_btn.png" class="hb_btn" noauto="noauto" />'+
+    	'<div class="hb_btn touch"></div>'+
     	'<div class="hb_link touch" onClick="{stm_clicki("send", "event","html5-2018-q4","html5-2018-q4","html5-2018-q4")};ga("send", "vent", "html5-2018-q4","html5-2018-q4","html5-2018-q4");"></div>';
-    $("#hb").append(resultStr);
-	$(".hb_link").bind("touchstart",function()
+    
+    $("#hb").html('<img src="images/r_bg.jpg?v=2" class="main" id="r_bg" noauto="noauto" />').append(resultStr);
+
+	$(".hb_link").unbind("touchstart").bind("touchstart",function()
 	{
 		window.location.href = "https://m.manyanshuning.com.cn/";
 	})	
 
+	$(".hb_btn").unbind("touchstart").bind("touchstart",function()
+	{	
+		main.o("#hb");
+		main.page1();
+		setTimeout(function()
+		{
+			main.init();
+		},500)
+	})
+
+	// 重新定位
+	var img = new Image();
+	img.src = 'images/r'+this.result+'s_2.png';
+	img.onload = function()
+	{
+		remTools.auto();
+	}
+	
 	// hb标配数据
 	var _height = $(window).height()/(setSize.size/100);
 	if(_height >= 1250)
@@ -154,7 +179,7 @@ main.init = function()
 	{
 		$("#hb").css("height","100%");
 	}
-	$(window).bind("resize",function()
+	$(window).unbind("resize").bind("resize",function()
 	{
 		var _height = $(window).height()/(setSize.size/100);
 		if(_height >= 1250)
@@ -210,6 +235,7 @@ main.djs = function(type)
 	clearTimeout(this.c2);
 	clearTimeout(this.c3);
 	this.f("#djs");
+	$("#djs").css("opacity",1);
 	for(var i=1;i<=3;i++) $(".q_"+i).hide();
 	$(".q_3").show();
 
@@ -280,7 +306,7 @@ main.hb = function()
 	this.o("#index");
 	this.o("#questions");
 	this.f("#savets");
-	$("#djs").remove();
+	$("#djs").css("opacity",0);
 	setTimeout(function()
 	{
 		main.o("#savets");
@@ -290,7 +316,7 @@ main.hb = function()
 		{
 			main.o("#savetts");
 		},3000)		
-	},3500)
+	},8000)
 
 	this.draw();
 }

@@ -3,7 +3,6 @@
 <head>
 <title>看来明年的我还能继续浪！</title>
 <meta name="format-detection" content="telephone=no" />
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta name="format-detection" content="email=no"/>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -14,7 +13,7 @@
 <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="js/rem.js"></script>
 <script type="text/javascript" src='https://res.wx.qq.com/open/js/jweixin-1.1.0.js'></script>
-<script type="text/javascript" src="js/wxShare.js?v=2"></script>
+<!-- <script type="text/javascript" src="js/wxShare.js?v=2"></script> -->
 <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=8VZX1wKY7urCMsyEtakkZjSCBgYGABLO"></script> 
 <!--Miaozhen基础代码-->
 <script>
@@ -68,11 +67,12 @@ stm_clicki('heatmap:on',5);
 </script>
 <!-- online -->
 <link rel="stylesheet" type="text/css" href="css/default.css">
-<link rel="stylesheet" type="text/css" href="css/animate.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css?v=3">
+<link rel="stylesheet" type="text/css" href="css/style.css?v=15">
 </head>
     <body>
         <div class='main'>
+            <canvas id="canvas" class="op0"></canvas>
             <div id="allmap"></div>
             <div class="blue"></div>
 
@@ -134,19 +134,21 @@ stm_clicki('heatmap:on',5);
 
             <!-- 保存提示 -->
             <div id="savets" class="main hide">
-                <img src="images/save_text.png?v=3" class="save_text move_from_up_short" center />
-                <img src="images/save_shiyi.png?v=3" class="save_qingsu move_from_down_short" id="save_shiyi" center />
-                <img src="images/save_qingsu.png?v=3" class="save_qingsu move_from_down_short" id="save_qingdu" center />
-                <img src="images/save_zhongdu.png?v=3" class="save_qingsu move_from_down_short" id="save_zhongdu" center />
-                <img src="images/save_zhongduzhongdu.png?v=3" class="save_qingsu move_from_down_short" id="save_zhongduzhongdu" center />
-                <img src="images/save_yanzhong.png?v=3" class="save_qingsu move_from_down_short" id="save_yanzhong" center />
+                <img src="images/save_text.png?v=5" class="save_text move_from_up_short" center />
+                <div class="save_text_self touch move_from_up_short save_text_a">
+                    <img src="images/save_text_self.png?v=5" class="" />
+                </div>
+                <img src="images/save_shiyi.png?v=4" class="save_qingsu move_from_down_short" id="save_shiyi" center />
+                <img src="images/save_qingsu.png?v=4" class="save_qingsu move_from_down_short" id="save_qingdu" center />
+                <img src="images/save_zhongdu.png?v=4" class="save_qingsu move_from_down_short" id="save_zhongdu" center />
+                <img src="images/save_zhongduzhongdu.png?v=4" class="save_qingsu move_from_down_short" id="save_zhongduzhongdu" center />
+                <img src="images/save_yanzhong.png?v=4" class="save_qingsu move_from_down_short" id="save_yanzhong" center />
                 <div class="savets_wendu touch move_from_down_short">22℃ 晴</div>
                 <div class="savets_zs touch move_from_down_short">188</div>
             </div>
 
             <!-- 结果 -->
             <div id="hb" class="main hide">
-                <canvas id="canvas" class="op0"></canvas>
                 <!-- <div class="blue"></div> -->
                 <img src="images/r_bg.jpg?v=2" class="main" id="r_bg" noauto="noauto" />
                 <!-- 
@@ -183,14 +185,14 @@ stm_clicki('heatmap:on',5);
 
         <!-- AUDIO -->
         <audio id="music" loop="loop" autoplay="autoplay">
-            <source src="music/music.mp3?v=2" type="audio/mpeg" />
+            <source src="music/music.mp3?v=3" type="audio/mpeg" />
         </audio>
     </body>
 </html>
 <!-- online -->
 <script type="text/javascript" src="js/rem_tools.min.js?v=3"></script>
 <script type="text/javascript" src="js/cityTianqi.js?v=3"></script>
-<script type="text/javascript" src="js/index.js?v=8"></script>
+<script type="text/javascript" src="js/index.js?v=81"></script>
 <script type="text/javascript" src="js/event.js?v=3"></script>
 <script type="text/javascript">
 //app_url.load({type:"js",path:"js/",data:["rem_tools.min","cityTianqi","index","event"]});
@@ -199,6 +201,7 @@ document.addEventListener("WeixinJSBridgeReady",function()
     document.getElementById("music").play(); 
 },false);
 
+/*
 $(function(){
     var options = {
             title : '看来明年的我还能继续浪！',
@@ -208,7 +211,7 @@ $(function(){
             statistics:false
     };        
     wxShare.init(options);
-})
+})*/
 
 main.init();
 main.getTQData(function()
